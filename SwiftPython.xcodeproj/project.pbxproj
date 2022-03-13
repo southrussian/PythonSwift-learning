@@ -11,6 +11,9 @@
 		58DFEFC627DD053A00C825F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DFEFC527DD053A00C825F6 /* ContentView.swift */; };
 		58DFEFC827DD053B00C825F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DFEFC727DD053B00C825F6 /* Assets.xcassets */; };
 		58DFEFCB27DD053B00C825F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DFEFCA27DD053B00C825F6 /* Preview Assets.xcassets */; };
+		58DFEFD427DD056200C825F6 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DFEFD327DD056200C825F6 /* PythonKit */; };
+		58DFEFD827DD0DF400C825F6 /* PyScript.py in Resources */ = {isa = PBXBuildFile; fileRef = 58DFEFD727DD0DF400C825F6 /* PyScript.py */; };
+		58DFEFDA27DD0EC000C825F6 /* RunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DFEFD927DD0EC000C825F6 /* RunScript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		58DFEFC727DD053B00C825F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DFEFCA27DD053B00C825F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58DFEFCC27DD053B00C825F6 /* SwiftPython.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPython.entitlements; sourceTree = "<group>"; };
+		58DFEFD727DD0DF400C825F6 /* PyScript.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyScript.py; sourceTree = "<group>"; };
+		58DFEFD927DD0EC000C825F6 /* RunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DFEFD427DD056200C825F6 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				58DFEFC327DD053A00C825F6 /* SwiftPythonApp.swift */,
 				58DFEFC527DD053A00C825F6 /* ContentView.swift */,
+				58DFEFD927DD0EC000C825F6 /* RunScript.swift */,
+				58DFEFD727DD0DF400C825F6 /* PyScript.py */,
 				58DFEFC727DD053B00C825F6 /* Assets.xcassets */,
 				58DFEFCC27DD053B00C825F6 /* SwiftPython.entitlements */,
 				58DFEFC927DD053B00C825F6 /* Preview Content */,
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = SwiftPython;
+			packageProductDependencies = (
+				58DFEFD327DD056200C825F6 /* PythonKit */,
+			);
 			productName = SwiftPython;
 			productReference = 58DFEFC027DD053A00C825F6 /* SwiftPython.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 58DFEFB727DD053A00C825F6;
+			packageReferences = (
+				58DFEFD227DD056200C825F6 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 58DFEFC127DD053A00C825F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +143,7 @@
 			files = (
 				58DFEFCB27DD053B00C825F6 /* Preview Assets.xcassets in Resources */,
 				58DFEFC827DD053B00C825F6 /* Assets.xcassets in Resources */,
+				58DFEFD827DD0DF400C825F6 /* PyScript.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DFEFDA27DD0EC000C825F6 /* RunScript.swift in Sources */,
 				58DFEFC627DD053A00C825F6 /* ContentView.swift in Sources */,
 				58DFEFC427DD053A00C825F6 /* SwiftPythonApp.swift in Sources */,
 			);
@@ -338,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58DFEFD227DD056200C825F6 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58DFEFD327DD056200C825F6 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DFEFD227DD056200C825F6 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58DFEFB827DD053A00C825F6 /* Project object */;
 }
